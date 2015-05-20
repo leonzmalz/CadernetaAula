@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CadernetaAula</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="cadastrar_aula">Cadastrar Aula</string>
+    <string name="id_">Id:</string>
+    <string name="data">Data</string>
+    <string name="data_">"Data: "</string>
+    <string name="title_activity_aula">Aula</string>
+    <string name="remover">Remover</string>
+    <string name="conte_do">Conteúdo</string>
+    <string name="disciplina">Disciplina</string>
+    <string name="confirmar">Confirmar</string>
+
+</resources>
