@@ -7,7 +7,11 @@ public class Aula implements Serializable {
 	private int idAula;
 	private String conteudo;
 	private String data;
-	private int idTuplina;
+	private Tuplina tuplina;
+	
+	public Aula(){
+		this.tuplina = new Tuplina();
+	}
 	
 	public int getIdAula() {
 		return idAula;
@@ -27,11 +31,11 @@ public class Aula implements Serializable {
 	public void setData(String data) {
 		this.data = data;
 	}
-	public int getIdTuplina() {
-		return idTuplina;
+	public Tuplina getTuplina() {
+		return this.tuplina;
 	}
-	public void setIdTuplina(int idTuplina) {
-		this.idTuplina = idTuplina;
+	public void setTuplina(Tuplina Tuplina) {
+		this.tuplina = Tuplina;
 	}
 
 	

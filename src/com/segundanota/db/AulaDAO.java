@@ -14,7 +14,7 @@ public abstract class AulaDAO {
 		String sql = "INSERT INTO aula (conteudo,data,fk_idTuplina) VALUES (?,?,?)";
 		// Pego os parametros
 		String[] params = { aula.getConteudo(), aula.getData(),
-				Integer.toString(aula.getIdTuplina()) };
+				Integer.toString(aula.getTuplina().getIdTuplina()) };
 		try {
 			db.execSQL(sql, params);
 			return true;
@@ -44,7 +44,7 @@ public abstract class AulaDAO {
 		String sql = "UPDATE aula SET conteudo = ?, data = ?, fk_idTuplina = ? WHERE idAula = ?";
 		// Pego os parametros
 		String[] params = { aula.getConteudo(), aula.getData(),
-				Integer.toString(aula.getIdTuplina()),
+				Integer.toString(aula.getTuplina().getIdTuplina()),
 				Integer.toString(aula.getIdAula()) };
 		try {
 			db.execSQL(sql, params);
@@ -66,7 +66,8 @@ public abstract class AulaDAO {
 			objAula.setIdAula(c.getInt(0));
 			objAula.setConteudo(c.getString(1));
 			objAula.setData(c.getString(2));
-			objAula.setIdTuplina(c.getInt(3));
+			//Seto a tuplina já pegando todos os valores referentes a turma, disciplina e escola
+			objAula.setTuplina(TuplinaDAO.getTuplinaById(con, c.getInt(3)));
 			listaAulas.add(objAula);
 		}
 		return listaAulas;

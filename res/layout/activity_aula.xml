@@ -23,7 +23,6 @@
         android:ems="10"
         android:inputType="date" >
 
-        <requestFocus />
     </EditText>
 
     <TextView
@@ -43,14 +42,12 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/disciplina" />
+        android:text="@string/tuplina" />
 
-    <EditText
-        android:id="@+id/txtNovoIdTuplina"
+    <Spinner
+        android:id="@+id/cbTuplinas"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number" />
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btnOk"

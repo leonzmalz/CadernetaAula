@@ -55,8 +55,10 @@ public class AulaAdapter extends BaseAdapter {
 		txtConteudo.setText(txtConteudo.getText() + aula.getConteudo());
 		TextView txtData = (TextView) itemLista.findViewById(R.id.txtData);
 		txtData.setText(txtData.getText() + aula.getData());
-		TextView txtIdTuplina = (TextView) itemLista.findViewById(R.id.txtIdTuplina);
-		txtIdTuplina.setText( txtIdTuplina.getText() + Integer.toString(aula.getIdTuplina()));
+		TextView txtTuplina = (TextView) itemLista.findViewById(R.id.txtTuplina);
+		//Pego a tuplina
+    	txtTuplina.setText(txtTuplina.getText() + aula.getTuplina().toString());
+
 		
 		
 		return itemLista;
